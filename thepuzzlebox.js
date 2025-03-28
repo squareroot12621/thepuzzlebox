@@ -1,6 +1,6 @@
 var canvas;
 var ctx;
-function setup() {
+async function setup() {
     // Set up the canvas so we can actually draw on it and stuff
     canvas = document.getElementById("thepuzzlebox");
     ctx = canvas.getContext("2d");
@@ -23,6 +23,7 @@ function setup() {
         ctx.font = '30px "JetBrains Mono"';
         ctx.fillText("JetBrains Mono", 10, 350);
     });
+    return undefined;
 }
 
 async function run() {
