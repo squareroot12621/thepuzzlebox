@@ -1,10 +1,3 @@
-var canvas;
-var ctx;
-var scene = "";
-var loadingStatus = "Setting up...";
-var loadingProgress = 0;
-
-const startTime = Performance.now();
 function secondsSinceStart() {
     // Performance.now() is originally in milliseconds
     return (Performance.now() - startTime) / 1000;
@@ -12,11 +5,12 @@ function secondsSinceStart() {
 
 async function setup() {
     // Set the scene *drum sting*
-    canvas = document.getElementById("thepuzzlebox");
-    ctx = canvas.getContext("2d");
-    scene = "loading";
-    loadingStatus = "Loading fonts..."
-    loadingProgress++;
+    const canvas = document.getElementById("thepuzzlebox");
+    const ctx = canvas.getContext("2d");
+    var scene = "loading";
+    var loadingStatus = "Loading fonts..."
+    var loadingProgress = 1;
+    const startTime = Performance.now();
     
     // Load the fonts into the canvas
     const roboto = new FontFace('Roboto', 'url(https://fonts.gstatic.com/s/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmZiAz0klQmz24O0g.woff)');
@@ -43,6 +37,11 @@ function clearScreen() {
 }
 
 function drawScreen() {
+    try {
+        scene = scene;
+    } catch {
+        return undefined;
+    }
     switch (scene) {
         case "":
             break;
@@ -74,7 +73,6 @@ function drawScreen() {
 
 async function run() {
     try {
-        drawScreen();
         setInterval(drawScreen, 20);
         await setup();
     } catch (e) {
