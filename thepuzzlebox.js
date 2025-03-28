@@ -1,5 +1,5 @@
-const canvas = document.getElementById("thepuzzlebox");
-const ctx = canvas.getContext("2d");
+var canvas;
+var ctx;
 var scene = "";
 var loadingStatus = "Setting up...";
 var loadingProgress = 0;
@@ -12,6 +12,8 @@ function secondsSinceStart() {
 
 async function setup() {
     // Set the scene *drum sting*
+    canvas = document.getElementById("thepuzzlebox");
+    ctx = canvas.getContext("2d");
     scene = "loading";
     loadingStatus = "Loading fonts..."
     loadingProgress++;
