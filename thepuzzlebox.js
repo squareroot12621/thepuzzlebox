@@ -1,6 +1,6 @@
 const canvas = document.getElementById("thepuzzlebox");
 const ctx = canvas.getContext("2d");
-var scene;
+var scene = "";
 var loadingStatus = "Setting up...";
 var loadingProgress = 0;
 
@@ -61,6 +61,7 @@ function drawScreen() {
 }
 
 async function run() {
+    drawScreen();
     setInterval(drawScreen, 20);
     await setup();
 }
