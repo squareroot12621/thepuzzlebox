@@ -14,13 +14,13 @@ async function setup() {
     const roboto = new FontFace('Roboto', 'url(https://fonts.gstatic.com/s/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmZiAz0klQmz24O0g.woff)');
     roboto.load().then((font) => {
         document.fonts.add(font);
+        ctx.font = '30px "Roboto"';
         ctx.fillText("Roboto", 10, 400);
-    }, (err) => {
-        ctx.fillText(err, 10, 200);
     });
     const jbm = new FontFace('JetBrains Mono', 'url(https://fonts.gstatic.com/s/jetbrainsmono/v20/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTN1OTk6OThhvAWV8.woff)');
     jbm.load().then((font) => {
         document.fonts.add(font);
+        ctx.font = '30px "JetBrains Mono"';
         ctx.fillText("JetBrains Mono", 10, 350);
     });
 }
