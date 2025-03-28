@@ -27,9 +27,9 @@ function setup() {
 
 async function run() {
     await setup();
-    ctx.fillStyle = "black";
-    ctx.fillRect(0, 0, 480, 480);
-    ctx.fillStyle = "white";
+    /*ctx.fillStyle = "black";
+    ctx.fillRect(0, 0, 480, 480);*/
+    ctx.fillStyle = "lime";
     ctx.font = '30px "JetBrains Mono"';
     ctx.fillText("Hello world!", 100, 100);
 }
