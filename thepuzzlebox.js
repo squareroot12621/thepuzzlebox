@@ -6,6 +6,7 @@ var loadingProgress = 0;
 try {
 const startTime = performance.now();
 } catch(e) {throw "OH";}
+throw "what?";
 function secondsSinceStart() {
     // performance.now() is originally in milliseconds
     return (performance.now() - startTime) / 1000;
