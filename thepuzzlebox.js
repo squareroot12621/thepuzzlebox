@@ -10,11 +10,6 @@ function secondsSinceStart() {
     return (performance.now() - startTime) / 1000;
 }
 
-function clearScreen() {
-    ctx.fillStyle = "black";
-    ctx.fillRect(-10, -10, 500, 500);
-}
-
 async function setup() {
     // Set the scene (drum sting)
     scene = "loading";
@@ -37,6 +32,12 @@ async function setup() {
     });
     loadingProcess++;
     scene = "main";
+}
+
+
+function clearScreen() {
+    ctx.fillStyle = "black";
+    ctx.fillRect(-10, -10, 500, 500);
 }
 
 function drawScreen() {
