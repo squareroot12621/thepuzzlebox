@@ -8,6 +8,11 @@ function secondsSinceStart() {
     return performance.now() - startTime;
 }
 
+function clearScreen() {
+    ctx.fillStyle = "black";
+    ctx.fillRect(-10, -10, 500, 500);
+}
+
 async function setup() {
     // Set up the canvas so we can actually draw on it and stuff
     canvas = document.getElementById("thepuzzlebox");
