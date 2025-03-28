@@ -1,3 +1,9 @@
+const canvas = document.getElementById("thepuzzlebox");
+const ctx = canvas.getContext("2d");
+var scene;
+var loadingStatus = "Setting up...";
+var loadingProgress = 0;
+
 const startTime = performance.now();
 function secondsSinceStart() {
     // performance.now() is originally in milliseconds
@@ -10,13 +16,10 @@ function clearScreen() {
 }
 
 async function setup() {
-    // Set up the canvas so we can actually draw on it and stuff
-    const canvas = document.getElementById("thepuzzlebox");
-    const ctx = canvas.getContext("2d");
     // Set the scene (drum sting)
-    var scene = "loading";
-    var loadingStatus = "Loading fonts..."
-    var loadingProgress = 1;
+    scene = "loading";
+    loadingStatus = "Loading fonts..."
+    loadingProgress++;
     
     // Load the fonts into the canvas
     const roboto = new FontFace('Roboto', 'url(https://fonts.gstatic.com/s/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmZiAz0klQmz24O0g.woff)');
