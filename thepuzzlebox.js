@@ -48,10 +48,16 @@ function drawScreen() {
             break;
         case "loading":
             clearScreen();
+            // "Loading..." + status
+            ctx.textAlign = "center";
             ctx.fillStyle = "white";
             ctx.font = '30px "Roboto", sans-serif';
-            ctx.fillText("Loading...", 10, 450);
-            throw "It gets here";
+            ctx.fillText("Loading...", 240, 240);
+            ctx.font = '20px "Roboto", sans-serif';
+            ctx.fillText(loadingStatus, 240, 270);
+            // Loading bar
+            ctx.fillStyle = "#00F040";
+            ctx.fillRect(0, 300, Math.round(loadingProgres/3 * 480), 20));
             break;
         case "main":
             ctx.fillStyle = "lime";
