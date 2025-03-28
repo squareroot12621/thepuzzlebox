@@ -7,6 +7,9 @@ function setup() {
 }
 function run() {
     setup();
-    ctx.fillStyle = "green";
-    ctx.fillRect(10, 10, 460, 460);
+    ctx.fillStyle = "black";
+    ctx.fillRect(0, 0, 480, 480);
+    ctx.fillStyle = "white";
+    ctx.font = "30px JetBrains Mono";
+    ctx.fillText("Hello world!", 100, 100);
 }
