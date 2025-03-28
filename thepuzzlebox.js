@@ -5,14 +5,13 @@ var loadingStatus = "Setting up...";
 var loadingProgress = 0;
 
 const startTime = Performance.now();
-throw "what?";
 function secondsSinceStart() {
     // Performance.now() is originally in milliseconds
     return (Performance.now() - startTime) / 1000;
 }
 
 async function setup() {
-    // Set the scene (drum sting)
+    // Set the scene *drum sting*
     scene = "loading";
     loadingStatus = "Loading fonts..."
     loadingProgress++;
