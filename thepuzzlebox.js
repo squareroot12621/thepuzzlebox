@@ -15,6 +15,8 @@ async function setup() {
     roboto.load().then((font) => {
         document.fonts.add(font);
         ctx.fillText("Roboto", 10, 400);
+    }, (err) => {
+        ctx.fillText(err, 10, 200);
     });
     const jbm = new FontFace('JetBrains Mono', 'url(https://fonts.gstatic.com/s/jetbrainsmono/v20/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTN1OTk6OThhvAWV8.woff)');
     jbm.load().then((font) => {
