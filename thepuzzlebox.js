@@ -43,6 +43,11 @@ function drawScreen() {
             ctx.font = '30px "Roboto", sans-serif';
             ctx.fillText("Loading...", 10, 450);
             break;
+        default:
+            clearScreen();
+            ctx.fillStyle = "#FF6060";
+            ctx.font = '30px "JetBrains Mono", monospace';
+            ctx.fillText("Unknown scene '" + scene + "'", 10, 200);
     }
 }
 
