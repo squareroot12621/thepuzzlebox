@@ -47,6 +47,7 @@ function drawScreen() {
             ctx.fillStyle = "white";
             ctx.font = '30px "Roboto", sans-serif';
             ctx.fillText("Loading...", 10, 450);
+            throw "It gets here";
             break;
         case "main":
             ctx.fillStyle = "lime";
@@ -68,6 +69,6 @@ async function run() {
         await setup();
     } catch (e) {
         errorBox = document.getElementById("errorbox");
-        errorBox.innerText += "\n" + e;
+        errorBox.innerText += e + "\n";
     }
 }
