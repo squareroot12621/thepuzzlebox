@@ -62,7 +62,12 @@ function drawScreen() {
 }
 
 async function run() {
-    drawScreen();
-    setInterval(drawScreen, 20);
-    await setup();
+    try {
+        drawScreen();
+        setInterval(drawScreen, 20);
+        await setup();
+    } catch (e) {
+        errorBox = document.getElementById("errorbox");
+        errorBox.innerText += "\n" + e;
+    }
 }
