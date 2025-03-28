@@ -3,13 +3,12 @@ const ctx = canvas.getContext("2d");
 var scene = "";
 var loadingStatus = "Setting up...";
 var loadingProgress = 0;
-try {
-const startTime = performance.now();
-} catch(e) {throw "OH";}
+
+const startTime = Performance.now();
 throw "what?";
 function secondsSinceStart() {
-    // performance.now() is originally in milliseconds
-    return (performance.now() - startTime) / 1000;
+    // Performance.now() is originally in milliseconds
+    return (Performance.now() - startTime) / 1000;
 }
 
 async function setup() {
