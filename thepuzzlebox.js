@@ -1,6 +1,6 @@
 var canvas;
 var ctx;
-async function setup() {
+function setup() {
     // Set up the canvas so we can actually draw on it and stuff
     canvas = document.getElementById("thepuzzlebox");
     ctx = canvas.getContext("2d");
@@ -26,7 +26,7 @@ async function setup() {
 }
 
 async function run() {
-    setup();
+    await setup();
     ctx.fillStyle = "black";
     ctx.fillRect(0, 0, 480, 480);
     ctx.fillStyle = "white";
