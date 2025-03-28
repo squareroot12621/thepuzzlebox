@@ -33,6 +33,7 @@ async function setup() {
         ctx.fillText("JetBrains Mono", 10, 350);
     });
     loadingProcess++;
+    scene = "main";
 }
 
 function drawScreen() {
@@ -42,6 +43,11 @@ function drawScreen() {
             ctx.fillStyle = "white";
             ctx.font = '30px "Roboto", sans-serif';
             ctx.fillText("Loading...", 10, 450);
+            break;
+        case "main":
+            ctx.fillStyle = "lime";
+            ctx.font = '30px "JetBrains Mono"';
+            ctx.fillText("Hello world! " + secondsSinceStart(), 100, 100);
             break;
         default:
             clearScreen();
@@ -54,7 +60,4 @@ function drawScreen() {
 async function run() {
     setInterval(drawScreen, 20);
     await setup();
-    ctx.fillStyle = "lime";
-    ctx.font = '30px "JetBrains Mono"';
-    ctx.fillText("Hello world! " + secondsSinceStart(), 100, 100);
 }
