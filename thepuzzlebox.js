@@ -1,5 +1,13 @@
 var canvas;
 var ctx;
+
+var scene = "loading";
+const startTime = performance.now();
+
+function secondsSinceStart() {
+    return performance.now() - startTime;
+}
+
 async function setup() {
     // Set up the canvas so we can actually draw on it and stuff
     canvas = document.getElementById("thepuzzlebox");
@@ -32,5 +40,5 @@ async function run() {
     ctx.fillRect(0, 0, 480, 480);*/
     ctx.fillStyle = "lime";
     ctx.font = '30px "JetBrains Mono"';
-    ctx.fillText("Hello world!", 100, 100);
+    ctx.fillText("Hello world! " + secondsSinceStart(), 100, 100);
 }
