@@ -44,6 +44,8 @@ function clearScreen() {
 
 function drawScreen() {
     switch (scene) {
+        case "":
+            break;
         case "loading":
             clearScreen();
             ctx.fillStyle = "white";
