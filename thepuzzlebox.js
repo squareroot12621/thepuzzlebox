@@ -37,6 +37,7 @@ function clearScreen() {
 }
 
 function drawScreen() {
+    log("Drawing!")
     try {
         scene = scene;
     } catch {
@@ -71,12 +72,19 @@ function drawScreen() {
     }
 }
 
+/***********************************************************
+ * SECTION 3: RUNNING                                      *
+ ***********************************************************/
+function log(msg) {
+    errorBox = document.getElementById("errorbox");
+    errorBox.innerText += e + "\n";
+}
+
 async function run() {
     try {
         setInterval(drawScreen, 20);
         await setup();
     } catch (e) {
-        errorBox = document.getElementById("errorbox");
-        errorBox.innerText += e + "\n";
+        log(e);
     }
 }
